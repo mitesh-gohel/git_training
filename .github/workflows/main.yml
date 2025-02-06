@@ -19,7 +19,7 @@ jobs:
           mkdir -p build
           echo "Sample artifact" > build/artifact.txt
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
           path: build/
