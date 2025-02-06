@@ -2,9 +2,10 @@ name: demo-action
 
 on:
   push:
-    branches: main
+    branches:
+      - main
 
-job:
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
