@@ -12,3 +12,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: run a sample
         run: echo hello world
+      - name: Build project
+        run: |
+          # Add your build commands here
+          echo "Building project..."
+          mkdir -p build
+          echo "Sample artifact" > build/artifact.txt
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build/
